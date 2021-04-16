@@ -8,4 +8,11 @@ describe('<Main/>', () => {
       screen.getByRole('heading', { name: /react avançado/i })
     ).toBeInTheDocument();
   });
+  it('should render correctly', () => {
+    const { container } = render(<Main />);
+    expect(
+      screen.getByRole('heading', { name: /react avançado/i })
+    ).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
