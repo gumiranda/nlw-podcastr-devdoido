@@ -1,0 +1,2 @@
+se precisar
+yarn add -D @storybook/preset-typescript
