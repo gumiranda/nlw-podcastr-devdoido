@@ -1,2 +1,4 @@
-se precisar
-yarn add -D @storybook/preset-typescript
+pra fazer seu projeto virar template
+
+
+yarn create next-app -e https://github.com/gumiranda/nomedorepo

@@ -14,6 +14,7 @@ function App({ Component, pageProps }: AppProps) {
           name="description"
           content="O portal do DevDoido ensina NodeJs e React Native"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
