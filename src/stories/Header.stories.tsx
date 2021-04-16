@@ -5,14 +5,16 @@ import { Header, HeaderProps } from './Header';
 
 export default {
   title: 'Example/Header',
-  component: Header,
+  component: Header
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => <Header {...args} />;
+const Template: Story<HeaderProps> = (
+  args: JSX.IntrinsicAttributes & HeaderProps & { children?: React.ReactNode }
+) => <Header {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  user: {},
+  user: {}
 };
 
 export const LoggedOut = Template.bind({});
