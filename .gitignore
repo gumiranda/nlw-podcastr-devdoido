@@ -32,3 +32,4 @@ yarn.*
 
 # vercel
 .vercel
+yarn.lock
