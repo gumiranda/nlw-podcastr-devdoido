@@ -1,7 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import GlobalStyles from 'styles/global';
-
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+  worker.start();
+}
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
