@@ -3,8 +3,9 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import GlobalStyles from 'styles/global';
 if (process.env.NODE_ENV === 'development') {
-  const { worker } = require('./mocks/browser');
-  worker.start();
+  if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+    require('../mocks');
+  }
 }
 function App({ Component, pageProps }: AppProps) {
   return (

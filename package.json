@@ -15,8 +15,8 @@
     "build-storybook": "build-storybook -s ./public",
     "cypress": "cypress open",
     "cypress:headless": "cypress run --browser chrome --headless",
-    "test:e2e": "start-server-and-test 'yarn start' 3000 'yarn cypress'",
-    "test:e2e:ci": "start-server-and-test 'yarn start' 3000 'yarn cypress:headless'"
+    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    "test:e2e:ci": "start-server-and-test dev http://localhost:3000 cypress:headless "
   },
   "husky": {
     "hooks": {
