@@ -26,7 +26,7 @@ html,body,#__next {
 }
 
 body {
-  font-family: --apple-system, 'Inter',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 :root {
@@ -47,10 +47,14 @@ body {
   background:var(--gray-50);
 }
 body input textarea button {
-font: 500 1rem --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font: 500 1rem --apple-system, 'Inter' ,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: var(---gray-500);
 }
-
+h1,h2,h3,h4,h5,h6{
+font-weight:600;
+font-family:Lexend,sans-serif;
+color:var(---gray-800);
+}
 h1 {
   font-size: 2rem;
 }
