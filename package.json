@@ -16,7 +16,8 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run --browser chrome --headless",
     "test:e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "test:e2e:ci": "start-server-and-test dev http://localhost:3000 cypress:headless"
+    "test:e2e:ci": "start-server-and-test dev http://localhost:3000 cypress:headless",
+    "fakeserver": "json-server server.json -w -d 750 -p 3333"
   },
   "husky": {
     "hooks": {
@@ -64,6 +65,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.3",
+    "json-server": "^0.16.3",
     "lint-staged": "^10.5.4",
     "msw": "^0.28.2",
     "plop": "^2.7.4",
