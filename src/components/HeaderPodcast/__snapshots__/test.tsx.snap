@@ -9,5 +9,59 @@ exports[`<HeaderPodcast /> should render the logo image 1`] = `
     class=""
     src="/public/logo.svg"
   />
+  <p
+    class=""
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class=""
+  >
+    Qui, 8 de abril
+  </span>
+</header>
+`;
+
+exports[`<HeaderPodcast /> should render the paragraph corretly 1`] = `
+<header
+  class=""
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/public/logo.svg"
+  />
+  <p
+    class=""
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class=""
+  >
+    Qui, 8 de abril
+  </span>
+</header>
+`;
+
+exports[`<HeaderPodcast /> should render the span date corretly 1`] = `
+<header
+  class=""
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/public/logo.svg"
+  />
+  <p
+    class=""
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class=""
+  >
+    Qui, 8 de abril
+  </span>
 </header>
 `;
