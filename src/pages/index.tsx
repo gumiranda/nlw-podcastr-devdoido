@@ -1,5 +1,5 @@
-import Main from 'components/Main/Main';
+import HeaderPodcast from 'components/HeaderPodcast/HeaderPodcast';
 
 export default function Home() {
-  return <Main />;
+  return <HeaderPodcast />;
 }

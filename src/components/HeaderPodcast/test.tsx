@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-
+import format from 'date-fns/format';
+import ptBR from 'date-fns/locale/pt-BR';
 import HeaderPodcast from './HeaderPodcast';
 
 describe('<HeaderPodcast />', () => {
@@ -14,8 +15,9 @@ describe('<HeaderPodcast />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
   it('should render the span date corretly', () => {
+    const currentDate = format(new Date(), 'EEEEEE, d MMMM', { locale: ptBR });
     const { container } = render(<HeaderPodcast />);
-    expect(screen.getByText(/Qui, 8 de abril/i)).toBeInTheDocument();
+    expect(screen.getByText(`${currentDate}`)).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
   });
 });
