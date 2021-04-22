@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { AppProps } from 'next/app';
+import HeaderPodcast from 'components/HeaderPodcast/HeaderPodcast';
 import Head from 'next/head';
 import GlobalStyles from 'styles/global';
 if (process.env.NODE_ENV === 'development') {
@@ -19,6 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
+      <HeaderPodcast />
       <Component {...pageProps} />
     </>
   );
