@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderPodcast /> should render the logo image 1`] = `
+<header
+  class=""
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/public/logo.svg"
+  />
+</header>
+`;
