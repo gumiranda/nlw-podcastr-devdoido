@@ -1,10 +1,9 @@
 import * as S from './styles';
-interface IProps {
-  propExample: any;
-}
-const LatestEpisodesPodcast = (props: IProps) => (
+
+const LatestEpisodesPodcast = ({ title = 'Últimos lançamentos' }) => (
   <S.Wrapper>
-    <h1>LatestEpisodesPodcast</h1>
+    <h2>{title}</h2>
+    <ul></ul>
   </S.Wrapper>
 );
 
