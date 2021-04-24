@@ -4,8 +4,9 @@ exports[`<LatestEpisodesPodcast /> should render the heading 1`] = `
 <section
   class=""
 >
-  <h1>
-    LatestEpisodesPodcast
-  </h1>
+  <h2>
+    Últimos lançamentos
+  </h2>
+  <ul />
 </section>
 `;

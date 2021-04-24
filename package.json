@@ -8,7 +8,7 @@
     "build:prod": "NODE_ENV=production yarn build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "test": "jest",
+    "test": "jest -u",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
