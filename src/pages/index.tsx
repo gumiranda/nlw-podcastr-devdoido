@@ -1,17 +1,29 @@
 import LayoutPodcast from 'components/LayoutPodcast';
+import HomepagePodcast from 'components/HomepagePodcast';
 import { GetStaticProps, GetServerSideProps } from 'next';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import api from 'services/api';
 import { convertDurationToTimeString } from 'utils/convertDurationToTimeString';
-type HomeProps = {
-  episodes: Array<any>;
+type Episode = {
+  id: string;
+  title: string;
+  thumbnail: string;
+  description: string;
+  members: string;
+  duration: number;
+  durationAsString: string;
+  url: string;
+  publishedAt: string;
 };
-export default function HomePodcast({ episodes }: HomeProps) {
+type HomeProps = {
+  allEpisodes: Array<Episode>;
+  latestEpisodes: Array<Episode>;
+};
+export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) {
   return (
     <LayoutPodcast>
-      <div>{JSON.stringify(episodes)}</div>
-      <div>a</div>
+      <HomepagePodcast>{JSON.stringify(allEpisodes)}</HomepagePodcast>
     </LayoutPodcast>
   );
 }
@@ -44,9 +56,12 @@ export const getStaticProps: GetStaticProps = async () => {
       url: episode.file.url
     };
   });
+  const allEpisodes = episodes.slice(2, episodes.length);
+  const latestEpisodes = episodes.slice(0, 2);
   return {
     props: {
-      episodes
+      allEpisodes,
+      latestEpisodes
     },
     revalidate: 60 * 60 * 8 //recarrega de 8 em 8 horas
   };

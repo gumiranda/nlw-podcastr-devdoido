@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LatestEpisodesPodcast /> should render the heading 1`] = `
+<section
+  class=""
+>
+  <h1>
+    LatestEpisodesPodcast
+  </h1>
+</section>
+`;

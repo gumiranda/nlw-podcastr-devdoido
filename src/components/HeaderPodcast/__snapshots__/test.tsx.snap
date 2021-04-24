@@ -43,7 +43,7 @@ exports[`<HeaderPodcast /> should render the logo image 1`] = `
   <span
     class="c2"
   >
-    qui, 22 abril
+    sab, 24 abril
   </span>
 </header>
 `;
@@ -91,7 +91,7 @@ exports[`<HeaderPodcast /> should render the paragraph corretly 1`] = `
   <span
     class="c2"
   >
-    qui, 22 abril
+    sab, 24 abril
   </span>
 </header>
 `;
@@ -139,7 +139,7 @@ exports[`<HeaderPodcast /> should render the span date corretly 1`] = `
   <span
     class="c2"
   >
-    qui, 22 abril
+    sab, 24 abril
   </span>
 </header>
 `;

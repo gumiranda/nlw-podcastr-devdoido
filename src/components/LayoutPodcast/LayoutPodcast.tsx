@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Player from 'components/Player';
+import Player from '../Player';
 import * as S from './styles';
 interface IProps {
   children: ReactNode;

@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import Main from '../Main';
 
-import LayoutPodcast from './LayoutPodcast';
+import HomepagePodcast from './HomepagePodcast';
 
-describe('<LayoutPodcast />', () => {
+describe('<HomepagePodcast />', () => {
   it('should render the heading', () => {
     const { container } = render(
-      <LayoutPodcast>
+      <HomepagePodcast>
         <Main />
-      </LayoutPodcast>
+      </HomepagePodcast>
     );
     expect(screen.getByRole('heading', { name: /react avançado/i })).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
