@@ -4,7 +4,9 @@ import AllEpisodesPodcast from './AllEpisodesPodcast';
 
 describe('<AllEpisodesPodcast />', () => {
   it('should render the heading', () => {
-    const { container } = render(<AllEpisodesPodcast />);
+    const { container } = render(
+      <AllEpisodesPodcast allEpisodes={[]} title="AllEpisodesPodcast" />
+    );
     expect(
       screen.getByRole('heading', { name: /AllEpisodesPodcast/i })
     ).toBeInTheDocument();

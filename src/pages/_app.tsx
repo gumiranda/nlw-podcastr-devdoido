@@ -8,6 +8,7 @@ if (process.env.NODE_ENV === 'development') {
   if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
     require('../mocks');
   }
+  //process.setMaxListeners(800);
 }
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -7,7 +7,9 @@ export default {
   component: AllEpisodesPodcast
 } as Meta;
 
-export const Basic: Story = (args) => <AllEpisodesPodcast allEpisodes={[]} {...args} />;
+export const Basic: Story = (args) => (
+  <AllEpisodesPodcast title="Todos os episódios" allEpisodes={[]} {...args} />
+);
 Basic.args = {
-  propExample: 'test'
+  title: 'test'
 };
