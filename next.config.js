@@ -7,6 +7,9 @@ module.exports = withPWA({
     dest: 'public',
     disable: !isProd
   },
+  images: {
+    domains: ['storage.googleapis.com']
+  },
   future: {
     webpack5: true
   }
