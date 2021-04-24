@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import LayoutPodcast from 'components/LayoutPodcast';
 import HomepagePodcast from 'components/HomepagePodcast';
 import AllEpisodesPodcast from 'components/AllEpisodesPodcast';
@@ -9,19 +8,16 @@ import ptBR from 'date-fns/locale/pt-BR';
 import api from 'services/api';
 import { convertDurationToTimeString } from 'utils/convertDurationToTimeString';
 import { Episode } from 'domain/entities';
-import { PlayerContext } from 'domain/contexts';
 type HomeProps = {
   allEpisodes: Array<Episode>;
   latestEpisodes: Array<Episode>;
 };
 export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) {
-  const player = useContext(PlayerContext);
-
   return (
     <LayoutPodcast>
       <HomepagePodcast>
         <LatestEpisodesPodcast
-          title={`Últimos Lançamentos  ${player}`}
+          title={`Últimos Lançamentos  ${0}`}
           latestEpisodes={latestEpisodes}
         />
         <AllEpisodesPodcast title={'Todos episódios'} allEpisodes={allEpisodes} />
