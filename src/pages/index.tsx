@@ -1,5 +1,7 @@
 import LayoutPodcast from 'components/LayoutPodcast';
 import { GetStaticProps, GetServerSideProps } from 'next';
+import { format, parseISO } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import api from 'services/api';
 type HomeProps = {
   episodes: Array<any>;
@@ -7,7 +9,7 @@ type HomeProps = {
 export default function HomePodcast({ episodes }: HomeProps) {
   return (
     <LayoutPodcast>
-      <div>oi</div>
+      <div>a</div>
     </LayoutPodcast>
   );
 }
@@ -31,9 +33,17 @@ export const getStaticProps: GetStaticProps = async () => {
       _order: 'desc'
     }
   });
+  const episodes = data.map((episode: any) => {
+    return {
+      ...episode,
+      publishedAt: format(parseISO(episode.published_at), 'd MMM yy', { locale: ptBR }),
+      duration: Number(episode.file.duration),
+      url: episode.file.url
+    };
+  });
   return {
     props: {
-      episodes: data
+      episodes
     },
     revalidate: 60 * 60 * 8 //recarrega de 8 em 8 horas
   };
