@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { Episode } from 'domain/entities';
 import Image from 'next/image';
-
+import Link from 'next/link';
 interface IProps {
   allEpisodes: Episode[];
   title: string;
@@ -35,7 +35,9 @@ const AllEpisodesPodcast = ({
                 />
               </td>
               <td>
-                <a href="">{episode.title}</a>
+                <Link href={`/episodes/${episode.id}`}>
+                  <a>{episode.title}</a>
+                </Link>
               </td>
               <td>{episode.members}</td>
               <td style={{ width: 100 }}>{episode.publishedAt}</td>

@@ -1,6 +1,8 @@
 import * as S from './styles';
 import { Episode } from 'domain/entities';
 import Image from 'next/image';
+import Link from 'next/link';
+
 interface IProps {
   latestEpisodes: Episode[];
   title: string;
@@ -23,7 +25,9 @@ const LatestEpisodesPodcast = ({
               alt={episode.title}
             />
             <S.EpisodeDetails>
-              <a href="">{episode.title}</a>
+              <Link href={`/episodes/${episode.id}`}>
+                <a>{episode.title}</a>
+              </Link>
               <p>{episode.members}</p>
               <span>{episode.publishedAt}</span>
               <span>{episode.durationAsString}</span>
