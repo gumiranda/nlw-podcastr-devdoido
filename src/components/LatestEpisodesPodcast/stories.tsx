@@ -7,7 +7,6 @@ export default {
   component: LatestEpisodesPodcast
 } as Meta;
 
-export const Basic: Story = (args) => <LatestEpisodesPodcast {...args} />;
-Basic.args = {
-  title: 'React Avançado'
-};
+export const Basic: Story = (args) => (
+  <LatestEpisodesPodcast title={'React Avançado'} latestEpisodes={[]} {...args} />
+);

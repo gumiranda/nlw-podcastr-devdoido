@@ -1,6 +1,13 @@
 import * as S from './styles';
-
-const LatestEpisodesPodcast = ({ title = 'Últimos lançamentos' }) => (
+import { Episode } from 'domain/entities';
+interface IProps {
+  latestEpisodes: Episode[];
+  title: string;
+}
+const LatestEpisodesPodcast = ({
+  latestEpisodes = [],
+  title = 'Últimos lançamentos'
+}: IProps) => (
   <S.Wrapper>
     <h2>{title}</h2>
     <ul></ul>

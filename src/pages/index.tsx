@@ -1,21 +1,14 @@
 import LayoutPodcast from 'components/LayoutPodcast';
 import HomepagePodcast from 'components/HomepagePodcast';
+import AllEpisodesPodcast from 'components/AllEpisodesPodcast';
+import LatestEpisodesPodcast from 'components/LatestEpisodesPodcast';
 import { GetStaticProps, GetServerSideProps } from 'next';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import api from 'services/api';
 import { convertDurationToTimeString } from 'utils/convertDurationToTimeString';
-type Episode = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  description: string;
-  members: string;
-  duration: number;
-  durationAsString: string;
-  url: string;
-  publishedAt: string;
-};
+import { Episode } from 'domain/entities';
+
 type HomeProps = {
   allEpisodes: Array<Episode>;
   latestEpisodes: Array<Episode>;
@@ -23,7 +16,10 @@ type HomeProps = {
 export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) {
   return (
     <LayoutPodcast>
-      <HomepagePodcast>{JSON.stringify(allEpisodes)}</HomepagePodcast>
+      <HomepagePodcast>
+        <LatestEpisodesPodcast latestEpisodes={latestEpisodes} />
+        <AllEpisodesPodcast allEpisodes={allEpisodes} />
+      </HomepagePodcast>
     </LayoutPodcast>
   );
 }
