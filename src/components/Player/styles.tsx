@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-
+export const BackgroundPlayer = styled.div`
+  background: var(--purple-500);
+`;
 export const Wrapper = styled.div`
   padding: 4.5rem 5.5rem;
   width: 30rem;
