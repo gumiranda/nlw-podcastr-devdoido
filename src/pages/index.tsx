@@ -17,7 +17,10 @@ export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) 
   return (
     <LayoutPodcast>
       <HomepagePodcast>
-        <LatestEpisodesPodcast latestEpisodes={latestEpisodes} />
+        <LatestEpisodesPodcast
+          title={'Últimos Lançamentos'}
+          latestEpisodes={latestEpisodes}
+        />
         <AllEpisodesPodcast allEpisodes={allEpisodes} />
       </HomepagePodcast>
     </LayoutPodcast>
