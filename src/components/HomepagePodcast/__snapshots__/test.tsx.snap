@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomepagePodcast /> should render the heading 1`] = `
-.c0 {
+.c1 {
   background-color: #06092b;
   color: #fff;
   width: 100%;
@@ -25,49 +25,60 @@ exports[`<HomepagePodcast /> should render the heading 1`] = `
   justify-content: center;
 }
 
-.c1 {
+.c2 {
   width: 25rem;
   margin-bottom: 2rem;
 }
 
-.c2 {
+.c3 {
   font-size: 2.5rem;
 }
 
-.c3 {
+.c4 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
   margin-top: 3rem;
   width: min(30rem,100%);
 }
 
+.c0 {
+  padding: 0 5rem;
+  height: calc(82vh - 6.5rem);
+  overflow-y: scroll;
+}
+
+.c0 h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
 <div
-  class=""
+  class="c0"
 >
   <main
-    class="c0"
+    class="c1"
   >
     <img
       alt="Image de um átomo e React Avançado escrito ao lado."
-      class="c1"
+      class="c2"
       src="/img/logo.svg"
     />
     <h1
-      class="c2"
+      class="c3"
     >
       React Avançado
     </h1>
     <h2
-      class="c3"
+      class="c4"
     >
       Typescript, ReactJS, NextJS e Styled Components
     </h2>
     <img
       alt="Um desenvolvedor de frente para uma tela com código"
-      class="c4"
+      class="c5"
       src="/img/hero-illustration.svg"
     />
   </main>

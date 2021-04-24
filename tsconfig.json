@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"] // resolve all modules prefixed with `@/` from `src` directory
+    },
     "lib": [
       "dom",
       "dom.iterable",

@@ -17,12 +17,14 @@ exports[`<HeaderPodcast /> should render the logo image 1`] = `
 }
 
 .c1 {
+  font-size: 1.4rem;
   margin-left: 2rem;
   padding: 0.75rem 0 0.75rem 3rem;
   border-left: 1px solid var(--gray-100);
 }
 
 .c2 {
+  font-size: 1.4rem;
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -65,12 +67,14 @@ exports[`<HeaderPodcast /> should render the paragraph corretly 1`] = `
 }
 
 .c1 {
+  font-size: 1.4rem;
   margin-left: 2rem;
   padding: 0.75rem 0 0.75rem 3rem;
   border-left: 1px solid var(--gray-100);
 }
 
 .c2 {
+  font-size: 1.4rem;
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -113,12 +117,14 @@ exports[`<HeaderPodcast /> should render the span date corretly 1`] = `
 }
 
 .c1 {
+  font-size: 1.4rem;
   margin-left: 2rem;
   padding: 0.75rem 0 0.75rem 3rem;
   border-left: 1px solid var(--gray-100);
 }
 
 .c2 {
+  font-size: 1.4rem;
   margin-left: auto;
   text-transform: capitalize;
 }

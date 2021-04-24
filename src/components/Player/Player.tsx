@@ -1,9 +1,10 @@
-import { PlayerContext } from 'domain/contexts';
+import { PlayerContext } from '@/domain/contexts';
 import * as S from './styles';
 import { useContext } from 'react';
 const Player = () => {
   const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
-  const episode = episodeList[currentEpisodeIndex] || {};
+  const episode =
+    episodeList && currentEpisodeIndex ? episodeList[currentEpisodeIndex] : { title: '' };
   return (
     <S.BackgroundPlayer>
       <S.Wrapper>

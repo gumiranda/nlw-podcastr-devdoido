@@ -202,6 +202,22 @@ exports[`<LayoutPodcast /> should render the heading 1`] = `
   flex: 1;
 }
 
+@media (max-width:722px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 <div
   class="c0"
 >
@@ -247,7 +263,8 @@ exports[`<LayoutPodcast /> should render the heading 1`] = `
         <strong
           class="c9"
         >
-          Tocando agora
+          Tocando agora 
+          
         </strong>
       </header>
       <div

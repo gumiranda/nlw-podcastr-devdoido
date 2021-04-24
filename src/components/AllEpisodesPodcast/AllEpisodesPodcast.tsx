@@ -1,9 +1,9 @@
 import * as S from './styles';
-import { Episode } from 'domain/entities';
+import { Episode } from '@/domain/entities';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { PlayerContext } from 'domain/contexts';
+import { PlayerContext } from '@/domain/contexts';
 interface IProps {
   allEpisodes: Episode[];
   title: string;
@@ -20,11 +20,13 @@ const AllEpisodesPodcast = ({
       <h2>{title}</h2>
       <table cellSpacing={0}>
         <thead>
-          <th></th>
-          <th>Podcast</th>
-          <th>Integrantes</th>
-          <th>Data</th>
-          <th>Duração</th>
+          <tr>
+            <th></th>
+            <th>Podcast</th>
+            <th>Integrantes</th>
+            <th>Data</th>
+            <th>Duração</th>
+          </tr>
         </thead>
         <tbody>
           {allEpisodes.map((episode) => {

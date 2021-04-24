@@ -162,7 +162,8 @@ exports[`<Player /> should render the logo image 1`] = `
       <strong
         class="c3"
       >
-        Tocando agora
+        Tocando agora 
+        
       </strong>
     </header>
     <div

@@ -1,8 +1,8 @@
 import * as S from './styles';
-import { Episode } from 'domain/entities';
+import { Episode } from '@/domain/entities';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayerContext } from 'domain/contexts';
+import { PlayerContext } from '@/domain/contexts';
 import { useContext } from 'react';
 interface IProps {
   latestEpisodes: Episode[];
