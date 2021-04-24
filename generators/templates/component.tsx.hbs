@@ -1,8 +1,8 @@
 import * as S from './styles';
-interface IProps {
-  propExample: any;
-}
-const {{pascalCase name}} = ({ propExample, ...props }: IProps) => (
+//interface IProps {
+//  propExample: string;
+//}
+const {{pascalCase name}} = ({ propExample='test', ...props }) => (
     <S.Wrapper>
       <h1>{{pascalCase name}}</h1>
     </S.Wrapper>
