@@ -1,12 +1,29 @@
 import { PlayerContext } from '@/domain/contexts';
 import * as S from './styles';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 const Player = () => {
-  const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const {
+    episodeList,
+    setPlayingState,
+    isPlaying,
+    togglePlay,
+    currentEpisodeIndex
+  } = useContext(PlayerContext);
   const episode = episodeList[currentEpisodeIndex];
+  useEffect(() => {
+    if (!audioRef.current) {
+      return;
+    }
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
   //episodeList && currentEpisodeIndex
   //?
   //  : { title: 'oi' };
@@ -49,6 +66,15 @@ const Player = () => {
               00:00
             </S.FooterPlayerProgressTextIndicator>
           </S.FooterPlayerProgress>
+          {episode && (
+            <audio
+              ref={audioRef}
+              src={episode.url}
+              autoPlay
+              onPlay={() => setPlayingState(true)}
+              onPause={() => setPlayingState(false)}
+            />
+          )}
           <S.FooterPlayerButtons>
             <S.GenericButton type="button" disabled={!episode}>
               <img src="/shuffle.svg" alt="Embaralhar" />
@@ -56,9 +82,14 @@ const Player = () => {
             <S.GenericButton type="button" disabled={!episode}>
               <img src="/play-previous.svg" alt="Tocar anterior" />
             </S.GenericButton>
-            <S.PlayButton type="button" disabled={!episode}>
-              <img src="/play.svg" alt="Tocar" />
+            <S.PlayButton onClick={togglePlay} type="button" disabled={!episode}>
+              {isPlaying ? (
+                <img src="/pause.svg" alt="Pausar" />
+              ) : (
+                <img src="/play.svg" alt="Tocar" />
+              )}
             </S.PlayButton>
+
             <S.GenericButton type="button" disabled={!episode}>
               <img src="/play-next.svg" alt="Tocar próxima" />
             </S.GenericButton>
