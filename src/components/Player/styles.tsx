@@ -8,7 +8,7 @@ export const BackgroundPlayer = styled.div`
 export const Wrapper = styled.div`
   padding: 4.5rem 5.5rem;
   width: 30rem;
-  height: 60rem;
+  height: 82vh;
   background: var(--purple-500);
   color: var(--white);
   display: flex;

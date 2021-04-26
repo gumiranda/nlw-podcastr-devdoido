@@ -6,14 +6,16 @@ import { useContext } from 'react';
 import { PlayerContext } from '@/domain/contexts';
 interface IProps {
   allEpisodes: Episode[];
+  episodeList: Episode[];
   title: string;
 }
 const AllEpisodesPodcast = ({
   allEpisodes = [],
+  episodeList = [],
   title = 'Todos os episódios',
   ...props
 }: IProps) => {
-  const { play } = useContext(PlayerContext);
+  const { playList } = useContext(PlayerContext);
 
   return (
     <S.Wrapper>
@@ -29,7 +31,7 @@ const AllEpisodesPodcast = ({
           </tr>
         </thead>
         <tbody>
-          {allEpisodes.map((episode) => {
+          {allEpisodes.map((episode, index) => {
             return (
               <tr key={episode.id}>
                 <td style={{ width: 72 }}>
@@ -50,7 +52,15 @@ const AllEpisodesPodcast = ({
                 <td style={{ width: 100 }}>{episode.publishedAt}</td>
                 <td>{episode.durationAsString}</td>
                 <td>
-                  <button type="button" onClick={() => play(episode)}>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      playList(
+                        episodeList,
+                        index + (episodeList.length - allEpisodes.length)
+                      )
+                    }
+                  >
                     <img src="/play-green.svg" alt="Tocar episódio" />
                   </button>
                 </td>

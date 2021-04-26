@@ -13,14 +13,20 @@ type HomeProps = {
   latestEpisodes: Array<Episode>;
 };
 export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) {
+  const episodeList = [...latestEpisodes, ...allEpisodes];
   return (
     <LayoutPodcast>
       <HomepagePodcast>
         <LatestEpisodesPodcast
           title={`Últimos Lançamentos  ${0}`}
+          episodeList={episodeList}
           latestEpisodes={latestEpisodes}
         />
-        <AllEpisodesPodcast title={'Todos episódios'} allEpisodes={allEpisodes} />
+        <AllEpisodesPodcast
+          title={'Todos episódios'}
+          episodeList={episodeList}
+          allEpisodes={allEpisodes}
+        />
       </HomepagePodcast>
     </LayoutPodcast>
   );

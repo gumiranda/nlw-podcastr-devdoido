@@ -11,7 +11,9 @@ const Player = () => {
     setPlayingState,
     isPlaying,
     togglePlay,
-    currentEpisodeIndex
+    currentEpisodeIndex,
+    playNext,
+    playPrevious
   } = useContext(PlayerContext);
   const episode = episodeList[currentEpisodeIndex];
   useEffect(() => {
@@ -36,7 +38,7 @@ const Player = () => {
         </S.HeaderPlayer>
         {episode ? (
           <S.CurrentEpisode>
-            <Image width={592} height={592} src={episode.thumbnail} objectFit="cover" />
+            <Image width={120} height={120} src={episode.thumbnail} objectFit="cover" />
             <strong>{episode.title}</strong>
             <span>{episode.members}</span>
           </S.CurrentEpisode>
@@ -79,7 +81,7 @@ const Player = () => {
             <S.GenericButton type="button" disabled={!episode}>
               <img src="/shuffle.svg" alt="Embaralhar" />
             </S.GenericButton>
-            <S.GenericButton type="button" disabled={!episode}>
+            <S.GenericButton onClick={playPrevious} type="button" disabled={!episode}>
               <img src="/play-previous.svg" alt="Tocar anterior" />
             </S.GenericButton>
             <S.PlayButton onClick={togglePlay} type="button" disabled={!episode}>
@@ -90,7 +92,7 @@ const Player = () => {
               )}
             </S.PlayButton>
 
-            <S.GenericButton type="button" disabled={!episode}>
+            <S.GenericButton onClick={playNext} type="button" disabled={!episode}>
               <img src="/play-next.svg" alt="Tocar próxima" />
             </S.GenericButton>
             <S.GenericButton type="button" disabled={!episode}>

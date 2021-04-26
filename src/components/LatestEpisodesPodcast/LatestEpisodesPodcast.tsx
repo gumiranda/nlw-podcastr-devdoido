@@ -6,19 +6,21 @@ import { PlayerContext } from '@/domain/contexts';
 import { useContext } from 'react';
 interface IProps {
   latestEpisodes: Episode[];
+  episodeList: Episode[];
   title: string;
 }
 const LatestEpisodesPodcast = ({
   latestEpisodes = [],
+  episodeList = [],
   title = 'Últimos lançamentos'
 }: IProps) => {
-  const { play } = useContext(PlayerContext);
+  const { playList } = useContext(PlayerContext);
 
   return (
     <S.Wrapper>
       <h2>{title}</h2>
       <ul>
-        {latestEpisodes.map((episode) => {
+        {latestEpisodes.map((episode, index) => {
           return (
             <li key={episode.id}>
               <Image
@@ -36,7 +38,7 @@ const LatestEpisodesPodcast = ({
                 <span>{episode.publishedAt}</span>
                 <span>{episode.durationAsString}</span>
               </S.EpisodeDetails>
-              <button type="button" onClick={() => play(episode)}>
+              <button type="button" onClick={() => playList(episodeList, index)}>
                 <img src="/play-green.svg" alt="Tocar episódio" />
               </button>
             </li>

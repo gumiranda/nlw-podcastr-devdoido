@@ -8,5 +8,10 @@ export default {
 } as Meta;
 
 export const Basic: Story = (args) => (
-  <LatestEpisodesPodcast title={'React Avançado'} latestEpisodes={[]} {...args} />
+  <LatestEpisodesPodcast
+    episodeList={[]}
+    title={'React Avançado'}
+    latestEpisodes={[]}
+    {...args}
+  />
 );
