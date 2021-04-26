@@ -28,7 +28,7 @@ const Player = () => {
           </S.EmptyPlayer>
         )}
 
-        <S.FooterPlayer>
+        <S.FooterPlayer empty={!episode ? true : false}>
           <S.FooterPlayerProgress>
             <S.FooterPlayerProgressTextIndicator>
               00:00

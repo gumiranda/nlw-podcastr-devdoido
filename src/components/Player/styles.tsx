@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+interface Props {
+  empty?: boolean;
+}
 export const BackgroundPlayer = styled.div`
   background: var(--purple-500);
 `;
@@ -64,7 +67,7 @@ export const CurrentEpisode = styled.div`
 export const FooterPlayer = styled.footer`
   align-self: stretch;
   &.empty {
-    opacity: 0.5;
+    opacity: ${(props: Props) => (props?.empty ? 0.5 : 1)};
   }
 `;
 export const FooterPlayerProgress = styled.div`
