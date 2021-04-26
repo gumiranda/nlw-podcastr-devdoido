@@ -5,7 +5,7 @@ export const BackgroundPlayer = styled.div`
 export const Wrapper = styled.div`
   padding: 4.5rem 5.5rem;
   width: 30rem;
-  height: 82vh;
+  height: 60rem;
   background: var(--purple-500);
   color: var(--white);
   display: flex;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 export const HeaderPlayer = styled.header`
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
 `;
 export const HeaderPlayerText = styled.strong`
   font-family: Lexend, sans-serif;
@@ -40,7 +40,26 @@ export const EmptyPlayer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const CurrentEpisode = styled.div``;
+export const CurrentEpisode = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  img {
+    border-radius: 1.5rem;
+  }
+  strong {
+    display: block;
+    margin-top: 2rem;
+    font: 600 1.25rem Lexend, sans-serif;
+    line-height: 1.75rem;
+  }
+  span {
+    display: block;
+    margin-top: 1rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+  }
+`;
 
 export const FooterPlayer = styled.footer`
   align-self: stretch;
