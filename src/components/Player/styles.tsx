@@ -40,6 +40,7 @@ export const EmptyPlayer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+export const CurrentEpisode = styled.div``;
 
 export const FooterPlayer = styled.footer`
   align-self: stretch;

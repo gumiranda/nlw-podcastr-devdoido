@@ -1,6 +1,8 @@
 import { PlayerContext } from '@/domain/contexts';
 import * as S from './styles';
 import { useContext } from 'react';
+import Image from 'next/image';
+import Episodes from '@/pages/episodes/[slug]';
 const Player = () => {
   const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
   const episode = episodeList[currentEpisodeIndex];
@@ -14,9 +16,18 @@ const Player = () => {
           <img src="/playing.svg" alt="Tocando agora" />
           <S.HeaderPlayerText>Tocando agora {episode?.title}</S.HeaderPlayerText>
         </S.HeaderPlayer>
-        <S.EmptyPlayer>
-          <strong>Selecione um podcast para ouvir</strong>
-        </S.EmptyPlayer>
+        {episode ? (
+          <S.CurrentEpisode>
+            <Image width={592} height={592} src={episode.thumbnail} objectFit="cover" />
+            <strong>{episode.title}</strong>
+            <span>{episode.members}</span>
+          </S.CurrentEpisode>
+        ) : (
+          <S.EmptyPlayer>
+            <strong>Selecione um podcast para ouvir</strong>
+          </S.EmptyPlayer>
+        )}
+
         <S.FooterPlayer>
           <S.FooterPlayerProgress>
             <S.FooterPlayerProgressTextIndicator>
