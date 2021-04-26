@@ -3,8 +3,10 @@ import * as S from './styles';
 import { useContext } from 'react';
 const Player = () => {
   const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
-  const episode =
-    episodeList && currentEpisodeIndex ? episodeList[currentEpisodeIndex] : { title: '' };
+  const episode = episodeList[currentEpisodeIndex];
+  //episodeList && currentEpisodeIndex
+  //?
+  //  : { title: 'oi' };
   return (
     <S.BackgroundPlayer>
       <S.Wrapper>
