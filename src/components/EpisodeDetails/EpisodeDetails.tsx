@@ -1,14 +1,13 @@
 import * as S from './styles';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayerContext } from '@/domain/contexts';
-import { useContext } from 'react';
+import { usePlayer } from '@/domain/contexts';
 
 interface IProps {
   episode: any;
 }
 const EpisodeDetails = ({ episode = {}, ...props }: IProps) => {
-  const { play } = useContext(PlayerContext);
+  const { play } = usePlayer();
 
   return (
     <S.Wrapper>

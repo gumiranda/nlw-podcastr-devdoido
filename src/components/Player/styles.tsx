@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 interface Props {
   empty?: boolean;
+  isActive?: boolean;
 }
 export const BackgroundPlayer = styled.div`
   background: var(--purple-500);
@@ -106,8 +107,18 @@ export const GenericButton = styled.button`
   border: 0;
   font-size: 0;
   transition: filter 0.2s;
+  filter: ${(props: Props) =>
+    props.isActive
+      ? 'invert(0.35) sepia(1) saturate(3) hue-rotate(100deg)'
+      : 'brightness(0.95)'};
   &:disabled {
     cursor: default;
+  }
+  &:hover {
+    filter: ${(props: Props) =>
+      props.isActive
+        ? 'brightness(0.55) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg)'
+        : 'brightness(0.95)'};
   }
   &:hover:not(:disabled) {
     filter: brightness(0.75);

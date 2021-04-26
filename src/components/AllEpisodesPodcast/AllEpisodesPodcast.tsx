@@ -2,8 +2,7 @@ import * as S from './styles';
 import { Episode } from '@/domain/entities';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext } from 'react';
-import { PlayerContext } from '@/domain/contexts';
+import { usePlayer } from '@/domain/contexts';
 interface IProps {
   allEpisodes: Episode[];
   episodeList: Episode[];
@@ -15,7 +14,7 @@ const AllEpisodesPodcast = ({
   title = 'Todos os episódios',
   ...props
 }: IProps) => {
-  const { playList } = useContext(PlayerContext);
+  const { playList } = usePlayer();
 
   return (
     <S.Wrapper>
