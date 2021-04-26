@@ -2,7 +2,8 @@ import { PlayerContext } from '@/domain/contexts';
 import * as S from './styles';
 import { useContext } from 'react';
 import Image from 'next/image';
-import Episodes from '@/pages/episodes/[slug]';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 const Player = () => {
   const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
   const episode = episodeList[currentEpisodeIndex];
@@ -34,25 +35,34 @@ const Player = () => {
               00:00
             </S.FooterPlayerProgressTextIndicator>
             <S.FooterPlayerSlider />
-            <S.FooterPlayerEmptySlider />
+            {episode ? (
+              <Slider
+                trackStyle={{ backgroundColor: '#04d361' }}
+                railStyle={{ backgroundColor: '#9f75ff' }}
+                handleStyle={{ borderColor: '#04d361', borderWidth: 4 }}
+              />
+            ) : (
+              <S.FooterPlayerEmptySlider />
+            )}
+
             <S.FooterPlayerProgressTextIndicator>
               00:00
             </S.FooterPlayerProgressTextIndicator>
           </S.FooterPlayerProgress>
           <S.FooterPlayerButtons>
-            <S.GenericButton type="button">
+            <S.GenericButton type="button" disabled={!episode}>
               <img src="/shuffle.svg" alt="Embaralhar" />
             </S.GenericButton>
-            <S.GenericButton type="button">
+            <S.GenericButton type="button" disabled={!episode}>
               <img src="/play-previous.svg" alt="Tocar anterior" />
             </S.GenericButton>
-            <S.PlayButton type="button">
+            <S.PlayButton type="button" disabled={!episode}>
               <img src="/play.svg" alt="Tocar" />
             </S.PlayButton>
-            <S.GenericButton type="button">
+            <S.GenericButton type="button" disabled={!episode}>
               <img src="/play-next.svg" alt="Tocar próxima" />
             </S.GenericButton>
-            <S.GenericButton type="button">
+            <S.GenericButton type="button" disabled={!episode}>
               <img src="/repeat.svg" alt="Repetir" />
             </S.GenericButton>
           </S.FooterPlayerButtons>

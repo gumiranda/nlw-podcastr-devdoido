@@ -105,6 +105,13 @@ export const GenericButton = styled.button`
   background: transparent;
   border: 0;
   font-size: 0;
+  transition: filter 0.2s;
+  &:disabled {
+    cursor: default;
+  }
+  &:hover:not(:disabled) {
+    filter: brightness(0.75);
+  }
 `;
 export const PlayButton = styled.button`
   background: transparent;
@@ -114,4 +121,11 @@ export const PlayButton = styled.button`
   height: 4rem;
   border-radius: 1rem;
   background: var(--purple-400);
+  transition: filter 0.2s;
+  &:hover:not(:disabled) {
+    filter: brightness(0.75);
+  }
+  &:disabled {
+    cursor: default;
+  }
 `;
