@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderPodcast /> should render the logo image 1`] = `
+.c0 {
+  background: var(--white);
+  height: 10.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3rem 5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.c1 {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  padding: 0.75rem 0 0.75rem 3rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+.c2 {
+  font-size: 1.4rem;
+  margin-left: auto;
+  text-transform: capitalize;
+}
+
+<header
+  class="c0"
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/logo.svg"
+  />
+  <p
+    class="c1"
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class="c2"
+  >
+    sab, 24 abril
+  </span>
+</header>
+`;
+
+exports[`<HeaderPodcast /> should render the paragraph corretly 1`] = `
+.c0 {
+  background: var(--white);
+  height: 10.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3rem 5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.c1 {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  padding: 0.75rem 0 0.75rem 3rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+.c2 {
+  font-size: 1.4rem;
+  margin-left: auto;
+  text-transform: capitalize;
+}
+
+<header
+  class="c0"
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/logo.svg"
+  />
+  <p
+    class="c1"
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class="c2"
+  >
+    sab, 24 abril
+  </span>
+</header>
+`;
+
+exports[`<HeaderPodcast /> should render the span date corretly 1`] = `
+.c0 {
+  background: var(--white);
+  height: 10.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3rem 5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.c1 {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  padding: 0.75rem 0 0.75rem 3rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+.c2 {
+  font-size: 1.4rem;
+  margin-left: auto;
+  text-transform: capitalize;
+}
+
+<header
+  class="c0"
+>
+  <img
+    alt="HeaderPodcast"
+    class=""
+    src="/logo.svg"
+  />
+  <p
+    class="c1"
+  >
+    O melhor está aqui
+  </p>
+  <span
+    class="c2"
+  >
+    sab, 24 abril
+  </span>
+</header>
+`;

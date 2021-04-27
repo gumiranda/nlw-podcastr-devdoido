@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"] // resolve all modules prefixed with `@/` from `src` directory
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,7 +25,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/mocks/*"
   ],
   "exclude": [
     "node_modules"

@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LayoutPodcast /> should render the heading 1`] = `
+.c1 {
+  background-color: #06092b;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  width: 25rem;
+  margin-bottom: 2rem;
+}
+
+.c3 {
+  font-size: 2.5rem;
+}
+
+.c4 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.c5 {
+  margin-top: 3rem;
+  width: min(30rem,100%);
+}
+
+.c6 {
+  background: var(--purple-500);
+}
+
+.c7 {
+  padding: 4.5rem 5.5rem;
+  width: 30rem;
+  height: 82vh;
+  background: var(--purple-500);
+  color: var(--white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.c9 {
+  font-family: Lexend,sans-serif;
+  font-weight: 600;
+}
+
+.c10 {
+  height: 20rem;
+  width: 100%;
+  border: 1.5px dashed var(--purple-300);
+  border-radius: 2.4rem;
+  background: linear-gradient( 143.8deg,rgba(145,100,250,0.8) 0%,rgba(0,0,0,0) 100% );
+  padding: 6.4rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c11 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c11.empty {
+  opacity: 0.5;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+}
+
+.c13 {
+  display: inline-block;
+  width: 4rem;
+  text-align: center;
+}
+
+.c14 {
+  width: 100%;
+  height: 4px;
+  background: var(--purple-300);
+  border-radius: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c15 {
+  width: 100%;
+  height: 4px;
+  background: var(--purple-300);
+  border-radius: 4px;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.c17 {
+  background: transparent;
+  border: 0;
+  font-size: 0;
+}
+
+.c18 {
+  background: transparent;
+  border: 0;
+  font-size: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background: var(--purple-400);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 main {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@media (max-width:722px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div
+  class="c0"
+>
+  <main>
+    <main
+      class="c1"
+    >
+      <img
+        alt="Image de um átomo e React Avançado escrito ao lado."
+        class="c2"
+        src="/img/logo.svg"
+      />
+      <h1
+        class="c3"
+      >
+        React Avançado
+      </h1>
+      <h2
+        class="c4"
+      >
+        Typescript, ReactJS, NextJS e Styled Components
+      </h2>
+      <img
+        alt="Um desenvolvedor de frente para uma tela com código"
+        class="c5"
+        src="/img/hero-illustration.svg"
+      />
+    </main>
+  </main>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
+    >
+      <header
+        class="c8"
+      >
+        <img
+          alt="Tocando agora"
+          src="/playing.svg"
+        />
+        <strong
+          class="c9"
+        >
+          Tocando agora 
+          
+        </strong>
+      </header>
+      <div
+        class="c10"
+      >
+        <strong>
+          Selecione um podcast para ouvir
+        </strong>
+      </div>
+      <footer
+        class="c11"
+      >
+        <div
+          class="c12"
+        >
+          <span
+            class="c13"
+          >
+            00:00
+          </span>
+          <div
+            class="c14"
+          />
+          <div
+            class="c15"
+          />
+          <span
+            class="c13"
+          >
+            00:00
+          </span>
+        </div>
+        <div
+          class="c16"
+        >
+          <button
+            class="c17"
+            type="button"
+          >
+            <img
+              alt="Embaralhar"
+              src="/shuffle.svg"
+            />
+          </button>
+          <button
+            class="c17"
+            type="button"
+          >
+            <img
+              alt="Tocar anterior"
+              src="/play-previous.svg"
+            />
+          </button>
+          <button
+            class="c18"
+            type="button"
+          >
+            <img
+              alt="Tocar"
+              src="/play.svg"
+            />
+          </button>
+          <button
+            class="c17"
+            type="button"
+          >
+            <img
+              alt="Tocar próxima"
+              src="/play-next.svg"
+            />
+          </button>
+          <button
+            class="c17"
+            type="button"
+          >
+            <img
+              alt="Repetir"
+              src="/repeat.svg"
+            />
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;

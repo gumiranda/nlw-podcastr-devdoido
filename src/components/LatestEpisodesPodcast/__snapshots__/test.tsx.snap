@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LatestEpisodesPodcast /> should render the heading 1`] = `
+.c0 ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+}
+
+.c0 ul li {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  padding: 2rem;
+  border-radius: 2.1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 ul li img {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 0.6rem;
+}
+
+.c0 ul li button {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--white);
+  border: 0.5px solid var(--gray-100);
+  border-radius: 0.875rem;
+  font-size: 0;
+  -webkit-transition: filter 0.2s;
+  transition: filter 0.2s;
+}
+
+.c0 ul li button img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c0 ul li button:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+@media (max-width:500px) {
+  .c0 ul {
+    grid-template-columns: auto;
+  }
+}
+
+<section
+  class="c0"
+>
+  <h2>
+    Últimos lançamentos
+  </h2>
+  <ul />
+</section>
+`;
