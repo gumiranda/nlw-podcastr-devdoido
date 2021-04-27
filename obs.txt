@@ -1,4 +1,5 @@
-pra fazer seu projeto virar template
+pra fazer seu projeto virar template   
 
 
 yarn create next-app -e https://github.com/gumiranda/nomedorepo
+sasa
