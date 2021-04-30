@@ -33,7 +33,7 @@ export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) 
 }
 // WITH SSR
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await fetch('http://localhost:3000/episodes');
+  const response = await fetch('https://devdoido.vercel.app/api/episodes');
   const data = await response.json();
   const episodes = data.map((episode: any) => {
     return {
