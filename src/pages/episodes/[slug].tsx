@@ -1,4 +1,4 @@
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import LayoutPodcast from 'components/LayoutPodcast';
 import { format, parseISO } from 'date-fns';
 import { useRouter } from 'next/router';
@@ -22,29 +22,29 @@ export default function Episodes({ episode }: EpisodeDetailsProps) {
     </LayoutPodcast>
   );
 }
-export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get('episodes', {
-    params: {
-      _limit: 2,
-      _sort: 'published_at',
-      _order: 'desc'
-    }
-  });
-  const paths = data.map((episode: any) => {
-    return {
-      params: {
-        slug: episode.id
-      }
-    };
-  });
-  return {
-    paths, //: [{ params: { slug: 'a-importancia-da-contribuicao-em-open-source' } }],
-    fallback: 'blocking' //incremental static generation //mostra alguma coisa somente depois do conteudo for carregado do server///
-    //true //tenta pegar episodio pelo lado do client //incremental static generation
-    // false //mostra 404 se nao achar episodio
-  };
-};
-export const getStaticProps: GetStaticProps = async (ctx) => {
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const { data } = await api.get('episodes', {
+//     params: {
+//       _limit: 2,
+//       _sort: 'published_at',
+//       _order: 'desc'
+//     }
+//   });
+//   const paths = data.map((episode: any) => {
+//     return {
+//       params: {
+//         slug: episode.id
+//       }
+//     };
+//   });
+//   return {
+//     paths, //: [{ params: { slug: 'a-importancia-da-contribuicao-em-open-source' } }],
+//     fallback: 'blocking' //incremental static generation //mostra alguma coisa somente depois do conteudo for carregado do server///
+//     //true //tenta pegar episodio pelo lado do client //incremental static generation
+//     // false //mostra 404 se nao achar episodio
+//   };
+// };
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug }: any = ctx.params;
   const { data } = await api.get(`episodes/${slug}`);
   const episode = {
@@ -55,7 +55,22 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     url: data.file.url
   };
   return {
-    props: { episode },
-    revalidate: 60 * 60 * 24
+    props: { episode }
   };
 };
+//WITH SSG
+// export const getStaticProps: GetStaticProps = async (ctx) => {
+//   const { slug }: any = ctx.params;
+//   const { data } = await api.get(`episodes/${slug}`);
+//   const episode = {
+//     ...data,
+//     publishedAt: format(parseISO(data.published_at), 'd MMM yy', { locale: ptBR }),
+//     duration: Number(data.file.duration),
+//     durationAsString: convertDurationToTimeString(Number(data.file.duration)),
+//     url: data.file.url
+//   };
+//   return {
+//     props: { episode },
+//     revalidate: 60 * 60 * 24
+//   };
+// };

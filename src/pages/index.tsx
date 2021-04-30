@@ -32,25 +32,9 @@ export default function HomePodcast({ allEpisodes, latestEpisodes }: HomeProps) 
   );
 }
 // WITH SSR
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const response = await fetch('http://localhost:3333/episodes');
-//   const data = await response.json();
-//   return {
-//     props: {
-//       episodes: data
-//     }
-//   };
-// };
-
-//WITH SSG
-export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get('episodes', {
-    params: {
-      _limit: 12,
-      _sort: 'published_at',
-      _order: 'desc'
-    }
-  });
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await fetch('http://localhost:3000/episodes');
+  const data = await response.json();
   const episodes = data.map((episode: any) => {
     return {
       ...episode,
@@ -66,7 +50,35 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       allEpisodes,
       latestEpisodes
-    },
-    revalidate: 60 * 60 * 8 //recarrega de 8 em 8 horas
+    }
   };
 };
+
+//WITH SSG
+// export const getStaticProps: GetStaticProps = async () => {
+//   const { data } = await api.get('episodes', {
+//     params: {
+//       _limit: 12,
+//       _sort: 'published_at',
+//       _order: 'desc'
+//     }
+//   });
+//   const episodes = data.map((episode: any) => {
+//     return {
+//       ...episode,
+//       publishedAt: format(parseISO(episode.published_at), 'd MMM yy', { locale: ptBR }),
+//       duration: Number(episode.file.duration),
+//       durationAsString: convertDurationToTimeString(Number(episode.file.duration)),
+//       url: episode.file.url
+//     };
+//   });
+//   const allEpisodes = episodes.slice(2, episodes.length);
+//   const latestEpisodes = episodes.slice(0, 2);
+//   return {
+//     props: {
+//       allEpisodes,
+//       latestEpisodes
+//     },
+//     revalidate: 60 * 60 * 8 //recarrega de 8 em 8 horas
+//   };
+// };
