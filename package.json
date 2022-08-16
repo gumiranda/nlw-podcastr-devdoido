@@ -51,7 +51,7 @@
     "@testing-library/cypress": "^7.0.6",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^28.1.7",
     "@types/node": "^15.0.0",
     "@types/react": "^17.0.3",
     "@types/styled-components": "^5.1.9",
